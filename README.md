@@ -1,6 +1,6 @@
 # Vacation Portal
 
-Streamlined vacation management platform built for the Epignosis developer assignment. Managers administer accounts and requests, while employees submit and track their vacations entirely online.
+Streamlined vacation management platform. Managers administer accounts and requests, while employees submit and track their vacations entirely online.
 
 ---
 
@@ -19,7 +19,7 @@ Streamlined vacation management platform built for the Epignosis developer assig
 ---
 
 ## Developer Assignment Purpose
-This repository implements the Epignosis developer assignment. The fictional brief describes a company whose rapid growth has outpaced paper-based vacation processes. The portal must let employees submit requests online and allow managers to approve or reject them. The scenarios provided in the brief include:
+The fictional brief describes a company whose rapid growth has outpaced paper-based vacation processes. The portal must let employees submit requests online and allow managers to approve or reject them. The scenarios provided in the brief include:
 
 - Managers signing in, viewing, creating, updating (including passwords), and deleting users
 - Managers reviewing submitted vacation requests and approving or rejecting them
