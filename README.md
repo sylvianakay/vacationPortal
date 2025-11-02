@@ -8,6 +8,7 @@ Streamlined vacation management platform. Managers administer accounts and reque
 - [Developer Assignment Purpose](#developer-assignment-purpose)
 - [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
+- [Database Design](#database-design)
 - [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
 - [Running the Stack](#running-the-stack)
@@ -61,6 +62,15 @@ src/             # React app (pages, components, styles)
 dist/            # Production build output (generated)
 vacation_portal.db # SQLite fallback (optional, not default)
 ```
+
+---
+
+## Database Design
+- **users** — core entity storing profile data (`name`, `email`, `employee_code`, `role`) with `bcrypt` password hashes. `employee_code` is unique and constrained to 7 digits to meet the brief.
+- **vacation_requests** — captures employee submissions with foreign key to `users.id`, start/end dates, optional reason, status enum (`pending`, `approved`, `rejected`), timestamps for auditing, and manager responder metadata.
+- **pending_password_updates** & **pending_email_updates** — queue tables tracking manager-initiated changes that require employee/manager approval. Each row references both the target user and the manager who initiated the change, with `created_at`/`decided_at` columns for flow history.
+
+The schema enforces referential integrity between managers, employees, and their requests, while the pending tables model the approval workflow described in the assignment. Indexes on foreign keys and status columns (via migrations) support the UI’s filtered queries without resorting to joins over unstructured data.
 
 ---
 
