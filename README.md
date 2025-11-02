@@ -9,13 +9,11 @@ Streamlined vacation management platform. Managers administer accounts and reque
 - [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
 - [Database Design](#database-design)
-- [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
 - [Running the Stack](#running-the-stack)
 - [Testing](#testing)
 - [Seed Accounts](#seed-accounts)
 - [Security Practices](#security-practices)
-- [Future Enhancements](#future-enhancements)
 
 ---
 
@@ -150,21 +148,4 @@ After `npm run db:seed`, sign in with:
 
 ---
 
-## Future Enhancements
-- Expand automated tests (integration/e2e coverage)
-- Add email notifications for approvals and rejections
-- Harden rate limiting and monitoring for authentication endpoints
-- Containerize stack for reproducible deployments (Docker Compose)
-
----
-
-## Assignment Reference
-The original brief (summarized) requested:
-- Managers can sign in, manage users (create/update/delete), and approve/reject vacation requests
-- Employees can sign in, submit, view, and withdraw pending vacation requests
-- Authentication via username/password (no third-party auth)
-- Relational database backing with seed data
-- Clear documentation for setup and evaluation
-
-This implementation delivers the above while emphasizing code quality, database design, secure handling of sensitive data, and a maintainable developer experience.
 
